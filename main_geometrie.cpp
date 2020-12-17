@@ -8,11 +8,11 @@
 #include "Timer.h"
 
 
-#define FSAA        ///Full Screen anti-alliasing
+#define FSAA 1       ///Full Screen anti-alliasing
 
 const int   DIMXR = 800,     ///dimensions (x, y) de la fenêtre d'affichage (après anti-alliasing)
             DIMYR = 450,
-            DIMX = DIMXR * FSAA,    ///dimensions (x, y) du buffer de rendu (rasterization)
+            DIMX = DIMXR * FSAA,    ///dimensions (x, y) du buffer de rendu (avant anti-alliasing)
             DIMY = DIMYR * FSAA,
             midX = DIMX/2, midY = DIMY/2,
             MAX_FPS = 60,      ///nombre maximal de fps atteignable
@@ -23,12 +23,12 @@ const int   DIMXR = 800,     ///dimensions (x, y) de la fenêtre d'affichage (apr
                             ///plus la rasterization est rapide mais elle perd en précision
             borderXmin = 0, borderXmax = DIMX,  ///valeurs (x, y) pour lesquelles le clipping est limité
             borderYmin = 0, borderYmax = DIMY - 1,
-            nb_mip_map_max = 12,    ///nombre de rétrecissement maximal de textures pour le mipmapping
+            nb_mip_map_max = 12,    ///nombre de rétrécissement maximal de textures pour le mipmapping
             tab_mip_map[nb_mip_map_max] = {50, 100, 250, 500, 1000, 2000, 4000, 7000, 12000, 20000, 28000, 40000};
                                 ///distances d'affichage de la texture au rang correspondant pour mipmapping
 
-const float Deg2Rad = M_PI / 180,   ///coefficient de conversion degre -> radiant
-            Rad2Deg = 180 / M_PI,   ///coefficient de conversion radiant -> degre
+const float Deg2Rad = M_PI / 180,   ///coefficient de conversion degree -> radiant
+            Rad2Deg = 180 / M_PI,   ///coefficient de conversion radiant -> degree
             PIsur2 = M_PI/2,
             pas_beta = 1/(float)nb_beta,
             tps_frame = 1000/MAX_FPS,
@@ -395,8 +395,8 @@ private:
         nb_mipmap = 1;
 
 public:
-    void init(char* file_name, SDL_Window *screen){
-        SDL_Surface *im = IMG_Load(file_name);
+    void init(std::string file_name, SDL_Window *screen){
+        SDL_Surface *im = IMG_Load(file_name.c_str());
 
         if(im == NULL)
             std::cout << "erreur, impossible de charger l'image " << file_name << std::endl;
@@ -1486,11 +1486,12 @@ public :
             list_m[i]->draw(print_ref, z_ref, LIGHT, DUDE.Cam);
         }
 
-#if FSAA != 1
+#if FSAA == 1
+        SDL_UpdateTexture(currentFrame, NULL, print_buffer, DIMXR * sizeof (uint32_t));
+#else
         copyDownscaleBuffer(print_buffer, DIMX, DIMY, resized_print_buffer, DIMXR, DIMYR);
         SDL_UpdateTexture(currentFrame, NULL, resized_print_buffer, DIMXR * sizeof (uint32_t));
-#else
-        SDL_UpdateTexture(currentFrame, NULL, print_buffer, DIMXR * sizeof (uint32_t));
+
 #endif
         SDL_RenderCopy(renderer, currentFrame, NULL, NULL);
         SDL_RenderPresent(renderer);
