@@ -6,6 +6,8 @@
 #ifndef CONST_H_INCLUDED
 #define CONST_H_INCLUDED
 
+#include <math.h>
+
 #define FSAA 1       ///Full Screen anti-alliasing
 
 const int   DIMXR = 800,     ///dimensions (x, y) de la fenêtre d'affichage (après anti-alliasing)
