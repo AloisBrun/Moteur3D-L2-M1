@@ -6,7 +6,6 @@
 #ifndef CONST_H_INCLUDED
 #define CONST_H_INCLUDED
 
-#include <math.h>
 
 #define FSAA 1       ///Full Screen anti-alliasing
 
@@ -27,6 +26,7 @@ const int   DIMXR = 800,     ///dimensions (x, y) de la fenêtre d'affichage (apr
             tab_mip_map[nb_mip_map_max] = {50, 100, 250, 500, 1000, 2000, 4000, 7000, 12000, 20000, 28000, 40000};
                                 ///distances d'affichage de la texture au rang correspondant pour mipmapping
 
+#define M_PI           3.14159265358979323846
 const float Deg2Rad = M_PI / 180,   ///coefficient de conversion degree -> radiant
             Rad2Deg = 180 / M_PI,   ///coefficient de conversion radiant -> degree
             PIsur2 = M_PI/2,

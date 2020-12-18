@@ -10,6 +10,7 @@
 #include "camera.h"
 #include "const.h"
 #include <vector>
+#include <ctime>
 #include <SDL2/SDL.h>
 
 class player{
