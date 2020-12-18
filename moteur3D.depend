@@ -381,7 +381,7 @@
 	<SDL2/SDL_image.h>
 	"Timer.h"
 
-1608241827 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\main_geometrie.cpp
+1608249870 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\main_geometrie.cpp
 	<math.h>
 	<ctime>
 	<random>
@@ -395,6 +395,7 @@
 	"function_global.h"
 	"camera.h"
 	"player.h"
+	"myTexture.h"
 
 1556002929 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\timer.h
 	<chrono>
@@ -418,9 +419,11 @@
 
 1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\light.cpp
 
-1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\mytexture.cpp
+1608250028 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\mytexture.cpp
+	"myTexture.h"
 
-1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\player.cpp
+1608241781 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\player.cpp
+	"player.h"
 
 1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\projection.cpp
 
@@ -428,7 +431,7 @@
 
 1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\world.cpp
 
-1608249614 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\const.h
+1608250034 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\const.h
 
 1608240790 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\types.h
 	<unistd.h>
@@ -450,4 +453,11 @@
 	<vector>
 	<ctime>
 	<SDL2/SDL.h>
+
+1608250013 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\mytexture.h
+	<unistd.h>
+	<string>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
 
