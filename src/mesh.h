@@ -18,7 +18,7 @@
 
 static std::vector<vertex> List_vert;
 static std::vector<face> List_face;
-static int point_chain = 0;
+//static int point_chain = 0;
 
 class Mesh{
 private:
