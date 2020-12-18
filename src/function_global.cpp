@@ -67,3 +67,15 @@ void push_at(std::vector<Vec2> &V, Vec2 I, unsigned int H){
     }
     V[H + 1] = I;
 }
+
+int HighestPoint(std::vector<Vec2> V){
+    int j = 0,
+        h_p = V[0].y;
+    for(unsigned int i = 1; i < V.size(); i++){
+        if(V[i].y > h_p){
+            h_p = V[i].y;
+            j = i;
+        }
+    }
+    return j;
+}

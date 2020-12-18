@@ -28,5 +28,7 @@ void pop_at(std::vector<Vec2> &V, unsigned int H);
 
 void push_at(std::vector<Vec2> &V, Vec2 I, unsigned int H);
 
+int HighestPoint(std::vector<Vec2> V);
+
 
 #endif // FUNC_GLOBAL_H_INCLUDED

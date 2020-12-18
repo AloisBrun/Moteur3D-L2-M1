@@ -381,7 +381,7 @@
 	<SDL2/SDL_image.h>
 	"Timer.h"
 
-1608250539 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\main_geometrie.cpp
+1608251447 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\main_geometrie.cpp
 	<math.h>
 	<ctime>
 	<random>
@@ -398,6 +398,9 @@
 	"myTexture.h"
 	"light.h"
 	"projection.h"
+	"clipping.h"
+	"face.h"
+	"rasterizer.h"
 
 1556002929 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\timer.h
 	<chrono>
@@ -412,11 +415,13 @@
 1608241481 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\camera.cpp
 	"camera.h"
 
-1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\clipping.cpp
+1608251373 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\clipping.cpp
+	"clipping.h"
 
-1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\face.cpp
+1608251247 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\face.cpp
+	"face.h"
 
-1608241231 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\function_global.cpp
+1608250678 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\function_global.cpp
 	"function_global.h"
 
 1608250126 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\light.cpp
@@ -435,12 +440,12 @@
 
 1608238205 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\world.cpp
 
-1608250034 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\const.h
+1608251319 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\const.h
 
 1608240790 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\types.h
 	<unistd.h>
 
-1608241115 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\function_global.h
+1608250699 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\function_global.h
 	"types.h"
 	<math.h>
 	<vector>
@@ -472,4 +477,25 @@
 	"types.h"
 	"camera.h"
 	"const.h"
+
+1608251393 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\clipping.h
+	"types.h"
+	"camera.h"
+	"face.h"
+	"const.h"
+	"projection.h"
+	<vector>
+
+1608251294 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\face.h
+	"types.h"
+	"camera.h"
+	"const.h"
+
+1608251565 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\rasterizer.h
+	"types.h"
+	"light.h"
+	"camera.h"
+	"myTexture.h"
+	"face.h"
+	<vector>
 
