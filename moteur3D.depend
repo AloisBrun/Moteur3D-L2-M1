@@ -381,7 +381,7 @@
 	<SDL2/SDL_image.h>
 	"Timer.h"
 
-1608251808 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\main_geometrie.cpp
+1608252028 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\main_geometrie.cpp
 	<math.h>
 	<ctime>
 	<random>
@@ -402,6 +402,7 @@
 	"face.h"
 	"rasterizer.h"
 	"postProcessing.h"
+	"mesh.h"
 
 1556002929 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\timer.h
 	<chrono>
@@ -503,4 +504,20 @@
 
 1608251842 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\postprocessing.h
 	<unistd.h>
+
+1608251755 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\postprocessing.cpp
+	"postProcessing.h"
+
+1608252559 c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\mesh.h
+	"types.h"
+	"face.h"
+	"myTexture.h"
+	"light.h"
+	"projection.h"
+	"clipping.h"
+	"rasterizer.h"
+	<vector>
+
+1608252526 source:c:\users\asus\documents\projets code blocks\moteur3d-l2-m1\src\mesh.cpp
+	"mesh.h"
 
